@@ -44,7 +44,7 @@ module.exports = class desuifier extends Plugin {
 	});
 	
 	const messageEvents = await getModule(["sendMessage"]);
-    		inject("owoifierSend", messageEvents, "sendMessage", function(args) {
+    		inject("desufySend", messageEvents, "sendMessage", function(args) {
 	    	if(deus) {
         	let text = args[1].content;
         	text = desufy(text);
